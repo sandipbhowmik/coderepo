@@ -1,0 +1,8 @@
+[ignite-dev-nodes]
+node1.example.com
+node2.example.com
+node3.example.com
+
+[ignite-dev-nodes:vars]
+ansible_ssh_common_args='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+ansible_user=ansible
