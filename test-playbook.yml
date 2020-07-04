@@ -1,5 +1,6 @@
 - name: Test Ansible Playbook Connectivity
   hosts: ignite-dev-nodes
+  become_method: sudo
   tasks:
     - name: Get Hostname
       shell: hostname -f
