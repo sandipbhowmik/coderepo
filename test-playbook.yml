@@ -1,5 +1,5 @@
 - name: Test Ansible Playbook Connectivity
-  hosts: node2.example.com
+  hosts: ignite-nodes
   tasks:
     - name: Get Hostname
       shell: hostname -f
