@@ -5,3 +5,10 @@
       shell: hostname -f
       register: ignitestatus
     - debug: var=ignitestatus.stdout_lines
+    
+    - name: Create user
+      user:
+        name: ignite
+        password: "{{ 'passW0rd' | password_hash('sha512') }}"
+        shell: /sbin/nologin
+        update_password: on_create
