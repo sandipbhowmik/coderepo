@@ -1,0 +1,7 @@
+- name: Test Ansible Playbook Connectivity
+  hosts: node2.example.com
+  tasks:
+    - name: Get Hostname
+      shell: hostname -f
+      register: ignitestatus
+    - debug: var=ignitestatus.stdout_lines
