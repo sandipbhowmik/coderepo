@@ -9,7 +9,7 @@ node {
                     credentialsId: 'jenkins-root-sshkey',
                     inventory: 'hosts',
                     playbook: 'test-playbook.yml',
-                    hostKeyChecking: false,
+                    hostKeyChecking: false
                 )
             }
         }
