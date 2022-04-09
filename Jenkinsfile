@@ -7,7 +7,7 @@ node {
                 ansiblePlaybook(
                     credentialsId: 'jenkins-ssh-key',
                     inventory: 'hosts',
-                    playbook: 'ignitedev-testconn-playbook.yml',
+                    playbook: 'test-playbook.yml',
                     hostKeyChecking: false,
                 )
             }
