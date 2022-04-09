@@ -1,15 +1,7 @@
-- name: Test Ansible Playbook Connectivity
-  hosts: ignite-dev-nodes
-  become: true
+- name: Test Playbook
+  hosts: all
   tasks:
     - name: Get Hostname
       shell: hostname -f
-      register: ignitestatus
-    - debug: var=ignitestatus.stdout_lines
-    
-    - name: Create user
-      user:
-        name: ignite
-        password: "{{ 'passW0rd' | password_hash('sha512') }}"
-        shell: /sbin/nologin
-        update_password: on_create
+      register: status
+    - debug: var=status.stdout_lines
