@@ -8,7 +8,7 @@ node {
                 ansiblePlaybook(
                     credentialsId: 'jenkins-root-sshkey',
                     inventory: 'hosts',
-                    playbook: 'files/test-playbook.yml',
+                    playbook: 'test-playbook.yml',
                     hostKeyChecking: false
                 )
             }
