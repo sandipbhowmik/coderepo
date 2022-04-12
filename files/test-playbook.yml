@@ -1,1 +1,8 @@
 
+- name: Test Playbook
+  hosts: all
+  tasks:
+    - name: Get Hostname
+      shell: hostname -f
+      register: status
+    - debug: var=status.stdout_lines
