@@ -10,8 +10,8 @@ node {
                 // git branch: 'master', credentialsId: 'jenkins-root-sshkey', url: 'git@github.com:sandipbhowmik/coderepo.git'
                 ansiblePlaybook(
                     credentialsId: 'jenkins-root-sshkey',
-                    inventory: 'hosts',
-                    playbook: 'test-playbook.yml',
+                    inventory: 'coderepo/hosts',
+                    playbook: 'coderepo/test-playbook.yml',
                     hostKeyChecking: false
                 )
             }
