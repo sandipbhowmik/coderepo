@@ -1,8 +1,6 @@
-[ignite-dev-nodes]
-node2.example.com
-node3.example.com
-node4.example.com
+[test]
+centos7-example-com
 
-[ignite-dev-nodes:vars]
+[test:vars]
 ansible_ssh_common_args='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-ansible_user=ansible
+ansible_user=root
